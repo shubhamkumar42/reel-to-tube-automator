@@ -1,0 +1,15 @@
+
+{
+  "appId": "app.lovable.c5e08a09550d4ea5a4ff2c6e9b074491",
+  "appName": "reel-to-tube-automator",
+  "server": {
+    "url": "https://c5e08a09-550d-4ea5-a4ff-2c6e9b074491.lovableproject.com?forceHideBadge=true",
+    "cleartext": true
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "",
+      "keystorePassword": ""
+    }
+  }
+}

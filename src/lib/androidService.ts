@@ -78,6 +78,12 @@ export const youtubeService = {
       success: true,
       message: "Video uploaded successfully",
     };
+  },
+  
+  // New method for checking if YouTube app is installed
+  isYouTubeAppInstalled: () => {
+    console.log("[ANDROID SERVICE] Checking if YouTube app is installed");
+    return true; // In a real app, this would check if the YouTube app is installed
   }
 };
 
@@ -105,6 +111,16 @@ export const systemService = {
     console.log(`[ANDROID SERVICE] Notification: ${title} - ${message}`);
     // This would use Android's notification system
     return true;
+  },
+  
+  // New method for checking device permissions
+  checkPermissions: () => {
+    console.log("[ANDROID SERVICE] Checking device permissions");
+    return {
+      storage: true,
+      accessibility: true,
+      notifications: true
+    };
   }
 };
 
@@ -176,6 +192,16 @@ export const backgroundService = {
     return {
       success: true,
       message: "Background service stopped successfully",
+    };
+  },
+  
+  // New method for checking service status
+  getStatus: () => {
+    console.log("[BACKGROUND SERVICE] Getting service status");
+    return {
+      running: true,
+      lastCheck: new Date().toISOString(),
+      monitoredAccounts: 1
     };
   }
 };
